@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">EcoTampa</string>
+
+    <string name="login">Login</string>
+    <string name="email_hint">email</string>
+    <string name="senha_hint">senha</string>
+    <string name="ou">ou</string>
+    <string name="criar_conta">Criar conta</string>
+    <string name="entrar">Entrar</string>
+    <string name="esqueci_minha_senha">Esqueci minha senha</string>
+
+    <string name="fazer_login">Fazer login</string>
+    <string name="criar">Criar</string>
+
+    <string name="recuperar_senha">Recuperar senha</string>
+    <string name="digite_email_recuperacao">Digite o e-mail de recuperação</string>
+    <string name="enviar_link_recuperacao">Enviar link de recuperação</string>
+
+    <string name="monitorar">Monitorar</string>
+    <string name="dispositivo_placeholder">Dispositivo: EcoTampa1</string>
+    <string name="contagem">Contagem:</string>
+    <string name="tampas_coletadas_placeholder">Tampas coletadas: 25</string>
+    <string name="reset">RESET</string>
+    <string name="aviso_reset">OBS: Tenha a certeza de que quer zerar a contagem. Essa ação NÃO pode ser desfeita!</string>
+</resources>
