@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "539471418897",
+    "project_id": "ecotampa-110c8",
+    "storage_bucket": "ecotampa-110c8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539471418897:android:95d0e47fb839f3b3b443b0",
+        "android_client_info": {
+          "package_name": "com.example.trabalho1_mobile_figma"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj-frjgz6Kl-36HqY4pb_JzfDXHtwFSwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

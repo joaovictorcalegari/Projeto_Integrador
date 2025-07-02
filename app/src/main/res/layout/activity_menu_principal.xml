@@ -32,7 +32,6 @@
         app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvAppTitle"
-        android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="Botão para ir ao monitoramento"/>
 
     <TextView
