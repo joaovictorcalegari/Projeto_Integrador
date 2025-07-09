@@ -28,6 +28,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="44dp"
         android:backgroundTint="@color/black"
+        android:src="@drawable/icbotaomonitorar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"

@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/dispositivo"
+        android:id="@+id/tvStatusConexao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dispositivo" />
+        app:layout_constraintTop_toBottomOf="@id/tvStatusConexao" />
 
     <ImageButton
         android:id="@+id/btnBack"
@@ -68,7 +68,7 @@
         android:backgroundTint="@color/black"
         android:text="Iniciar esteira"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/btnReset2"
+        app:layout_constraintBottom_toTopOf="@+id/btnZerarContagem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

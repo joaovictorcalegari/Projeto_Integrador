@@ -15,11 +15,15 @@ class activity_monitorar : AppCompatActivity() {
     private lateinit var controleRef: DatabaseReference
     private var esteiraLigada = false
     private lateinit var btnZerarContagem: Button
+    private lateinit var tvStatusConexao: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_monitorar)
         btnZerarContagem = findViewById(R.id.btnZerarContagem)
+
+        tvStatusConexao = findViewById(R.id.tvStatusConexao)
+        escutarStatusConexao()
 
         btnZerarContagem.setOnClickListener {
             val countRef = FirebaseDatabase.getInstance().getReference("tampas/count")
@@ -51,8 +55,32 @@ class activity_monitorar : AppCompatActivity() {
         // Botão ON/OFF da esteira
         btnEsteira.setOnClickListener {
             val novoEstado = !esteiraLigada
-            controleRef.setValue(novoEstado)
+            btnEsteira.isEnabled = false  // desabilita temporariamente
+
+            controleRef.setValue(novoEstado).addOnCompleteListener {
+                btnEsteira.isEnabled = true  // reabilita depois do envio
+            }
         }
+    }
+
+    private fun escutarStatusConexao() {
+        val statusRef = FirebaseDatabase.getInstance().getReference("status/wifiConectado")
+        statusRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val conectado = snapshot.getValue(Boolean::class.java) ?: false
+                if (conectado) {
+                    tvStatusConexao.text = "Conectado"
+                    tvStatusConexao.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+                } else {
+                    tvStatusConexao.text = "Sem conexão"
+                    tvStatusConexao.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                tvStatusConexao.text = "Erro ao verificar conexão"
+            }
+        })
     }
 
     private fun escutarContagem() {
